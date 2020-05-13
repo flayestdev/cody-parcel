@@ -1,0 +1,35 @@
+{
+  "name": "cody",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rm -rf ./development && rm -rf ./.cache && parcel ./public/index.html --out-dir development -p 3000",
+    "build": "parcel build ./public/index.html --out-dir dist --public-url ./"
+  },
+  "dependencies": {
+    "codyhouse-framework": "^2.6.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/runtime-corejs2": "^7.9.6",
+    "autoprefixer": "^9.7.6",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.5"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "overrideBrowserslist": [
+          ">1%",
+          "last 4 versions",
+          "Firefox ESR",
+          "ie >= 9"
+        ]
+      }
+    }
+  },
+  "author": "",
+  "license": "ISC"
+}

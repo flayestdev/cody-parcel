@@ -1,0 +1,30 @@
+@import '../node_modules/codyhouse-framework/main/assets/css/base';
+@import './assets/custom-style';
+
+body {
+  background-color: rgb(213, 210, 210);
+  font-family: sans-serif;
+  display: grid;
+}
+
+.page {
+  display: grid;
+  grid-gap: 33px;
+  grid-template:
+    "head head  head" 1fr
+    "nav  main  main" minmax(100px, 1fr)
+    "nav  foot  foot" 2fr /
+    1fr   100px 1fr;
+}
+.page__head {
+  grid-area: head;
+}
+.page__nav {
+  grid-area: nav;
+}
+.page__main {
+  grid-area: main;
+}
+.page__footer {
+  grid-area: foot;
+}
